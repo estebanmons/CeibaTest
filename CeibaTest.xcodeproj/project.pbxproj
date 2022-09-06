@@ -10,7 +10,6 @@
 		474CDDB328C7B17700B9F842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDB228C7B17700B9F842 /* AppDelegate.swift */; };
 		474CDDB528C7B17700B9F842 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDB428C7B17700B9F842 /* SceneDelegate.swift */; };
 		474CDDB728C7B17700B9F842 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDB628C7B17700B9F842 /* ViewController.swift */; };
-		474CDDBA28C7B17700B9F842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 474CDDB828C7B17700B9F842 /* Main.storyboard */; };
 		474CDDBD28C7B17700B9F842 /* CeibaTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDBB28C7B17700B9F842 /* CeibaTest.xcdatamodeld */; };
 		474CDDBF28C7B17900B9F842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 474CDDBE28C7B17900B9F842 /* Assets.xcassets */; };
 		474CDDC228C7B17900B9F842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 474CDDC028C7B17900B9F842 /* LaunchScreen.storyboard */; };
@@ -41,7 +40,6 @@
 		474CDDB228C7B17700B9F842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		474CDDB428C7B17700B9F842 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		474CDDB628C7B17700B9F842 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		474CDDB928C7B17700B9F842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		474CDDBC28C7B17700B9F842 /* CeibaTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CeibaTest.xcdatamodel; sourceTree = "<group>"; };
 		474CDDBE28C7B17900B9F842 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		474CDDC128C7B17900B9F842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 				474CDDB228C7B17700B9F842 /* AppDelegate.swift */,
 				474CDDB428C7B17700B9F842 /* SceneDelegate.swift */,
 				474CDDB628C7B17700B9F842 /* ViewController.swift */,
-				474CDDB828C7B17700B9F842 /* Main.storyboard */,
 				474CDDBE28C7B17900B9F842 /* Assets.xcassets */,
 				474CDDC028C7B17900B9F842 /* LaunchScreen.storyboard */,
 				474CDDC328C7B17900B9F842 /* Info.plist */,
@@ -236,7 +233,6 @@
 			files = (
 				474CDDC228C7B17900B9F842 /* LaunchScreen.storyboard in Resources */,
 				474CDDBF28C7B17900B9F842 /* Assets.xcassets in Resources */,
-				474CDDBA28C7B17700B9F842 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +297,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		474CDDB828C7B17700B9F842 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				474CDDB928C7B17700B9F842 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		474CDDC028C7B17900B9F842 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +434,6 @@
 				INFOPLIST_FILE = CeibaTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
@@ -475,7 +462,6 @@
 				INFOPLIST_FILE = CeibaTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
