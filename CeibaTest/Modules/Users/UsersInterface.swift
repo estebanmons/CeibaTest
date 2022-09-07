@@ -20,7 +20,7 @@ enum UsersResult {
 }
 
 protocol UsersWireframeInterface: WireframeInterface {
-    func goToPosts(user: User)
+    func goToPosts(user: UserModel)
 }
 
 protocol UsersViewInterface: ViewInterface {

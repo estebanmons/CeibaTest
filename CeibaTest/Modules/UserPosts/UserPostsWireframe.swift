@@ -10,12 +10,11 @@ import Foundation
 final class UserPostsWireframe: BaseWireframe {
 
     // MARK: - Module setup -
-    init(user: User) {
+    init(user: UserModel) {
         let moduleViewController = UserPostsViewController()
         super.init(viewController: moduleViewController)
-
         let interactor = UserPostsInteractor(userPostsRepository: UserPostsRepository())
-        let presenter = UserPostsPresenter(view: moduleViewController, interactor: interactor, wireframe: self)
+        let presenter = UserPostsPresenter(view: moduleViewController, interactor: interactor, wireframe: self, user: user)
         moduleViewController.presenter = presenter
     }
 }

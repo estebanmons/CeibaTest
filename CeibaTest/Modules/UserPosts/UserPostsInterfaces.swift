@@ -7,14 +7,28 @@
 
 import Foundation
 
-protocol UserPostsWireframeInterface: WireframeInterface {
+struct PostModel {
+    let title: String
+    let body: String
 }
 
+enum PostsResult {
+    case success([Post])
+    case error
+}
+
+protocol UserPostsWireframeInterface: WireframeInterface { }
+
 protocol UserPostsViewInterface: ViewInterface {
+    func setUserData(user: UserModel)
+    func reloadData()
 }
 
 protocol UserPostsPresenterInterface: PresenterInterface {
+    var numberOfPosts: Int { get }
+    func getPostModel(at row: Int) -> PostModel
 }
 
 protocol UserPostsInteractorInterface: InteractorInterface {
+    func getPosts(by userId: Int, completionHandler: @escaping (PostsResult) -> Void)
 }

@@ -25,7 +25,8 @@ final class UsersViewController: UIViewController {
     
     // MARK: - Public properties -
     var presenter: UsersPresenterInterface!
-
+    
+    // MARK: - Life cycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()

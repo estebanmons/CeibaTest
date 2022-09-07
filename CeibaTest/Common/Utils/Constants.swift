@@ -23,4 +23,8 @@ struct Constants {
         static let phoneFillImage = "phone.fill"
         static let emailFillImage = "envelope.fill"
     }
+    
+    struct Posts {
+        static let title = "Publicaciones"
+    }
 }

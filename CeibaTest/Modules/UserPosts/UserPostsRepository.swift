@@ -12,8 +12,8 @@ final class UserPostsRepository {
     // MARK: - Private properties -
     private lazy var apiManager = APIManager()
     
-    func requestGetUsers(completionHandler: @escaping (UsersResult) -> Void) {
-        apiManager.request(parameters: EmptyRequest(), endpoint: .getUsers) { (result: Result<[User]>) in
+    func requestGetPosts(by userId: Int, completionHandler: @escaping (PostsResult) -> Void) {
+        apiManager.request(parameters: EmptyRequest(), endpoint: .getUserPosts(id: userId)) { (result: Result<[Post]>) in
             switch result {
             case .success(let data):
                 completionHandler(.success(data))

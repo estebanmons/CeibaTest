@@ -18,4 +18,15 @@ final class UserPostsInteractor {
 
 // MARK: - Extensions -
 extension UserPostsInteractor: UserPostsInteractorInterface {
+    
+    func getPosts(by userId: Int, completionHandler: @escaping (PostsResult) -> Void) {
+        userPostsRepository.requestGetPosts(by: userId) { result in
+            switch result {
+            case .success(let posts):
+                completionHandler(.success(posts))
+            case .error:
+                completionHandler(.error)
+            }
+        }
+    }
 }

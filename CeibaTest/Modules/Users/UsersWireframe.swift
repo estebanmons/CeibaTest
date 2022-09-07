@@ -23,7 +23,7 @@ final class UsersWireframe: BaseWireframe {
 // MARK: - Extensions -
 extension UsersWireframe: UsersWireframeInterface {
     
-    func goToPosts(user: User) {
+    func goToPosts(user: UserModel) {
         navigationController?.pushWireframe(UserPostsWireframe(user: user))
     }
 }

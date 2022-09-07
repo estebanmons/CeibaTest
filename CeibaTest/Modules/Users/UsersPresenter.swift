@@ -59,6 +59,6 @@ extension UsersPresenter: UsersPresenterInterface {
     
     func goToPosts(idUser: Int) {
         guard let user = allUsers.first(where: {$0.id == idUser}) else { return }
-        wireframe.goToPosts(user: user)
+        wireframe.goToPosts(user: UserModel(email: user.email, id: user.id, name: user.name, phone: user.phone))
     }
 }
