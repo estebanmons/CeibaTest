@@ -7,7 +7,26 @@
 
 import Foundation
 
-final class UsersInteractor { }
+final class UsersInteractor {
+    
+    var usersRepository: UsersRepository
+    
+    init(usersRepository: UsersRepository) {
+        self.usersRepository = usersRepository
+    }
+}
 
 // MARK: - Extensions -
-extension UsersInteractor: UsersInteractorInterface { }
+extension UsersInteractor: UsersInteractorInterface {
+    
+    func requestGetUsers(completionHandler: @escaping (UsersResult) -> Void) {
+        usersRepository.requestGetUsers { result in
+            switch result {
+            case .success(let users):
+                completionHandler(.success(users))
+            case .error:
+                completionHandler(.error)
+            }
+        }
+    }
+}

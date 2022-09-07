@@ -7,10 +7,32 @@
 
 import Foundation
 
-protocol UsersWireframeInterface: WireframeInterface { }
+struct UserModel {
+    let email: String
+    let id: Int
+    let name: String
+    let phone: String
+}
 
-protocol UsersViewInterface: ViewInterface { }
+enum UsersResult {
+    case success([User])
+    case error
+}
 
-protocol UsersPresenterInterface: PresenterInterface { }
+protocol UsersWireframeInterface: WireframeInterface {
+    func goToPosts(user: User)
+}
 
-protocol UsersInteractorInterface: InteractorInterface { }
+protocol UsersViewInterface: ViewInterface {
+    func reloadData()
+}
+
+protocol UsersPresenterInterface: PresenterInterface {
+    var numberOfUsers: Int { get }
+    func getUserModel(at row: Int) -> UserModel
+    func goToPosts(idUser: Int)
+}
+
+protocol UsersInteractorInterface: InteractorInterface {
+    func requestGetUsers(completionHandler: @escaping (UsersResult) -> Void)
+}
