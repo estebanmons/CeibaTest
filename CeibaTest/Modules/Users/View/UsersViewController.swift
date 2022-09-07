@@ -7,10 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class UsersViewController: UIViewController {
+    
+    // MARK: - Public properties -
+    var presenter: UsersPresenterInterface!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
     }
 }
+
+// MARK: - Extensions -
+extension UsersViewController: UsersViewInterface { }

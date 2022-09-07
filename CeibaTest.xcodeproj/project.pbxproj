@@ -9,13 +9,23 @@
 /* Begin PBXBuildFile section */
 		474CDDB328C7B17700B9F842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDB228C7B17700B9F842 /* AppDelegate.swift */; };
 		474CDDB528C7B17700B9F842 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDB428C7B17700B9F842 /* SceneDelegate.swift */; };
-		474CDDB728C7B17700B9F842 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDB628C7B17700B9F842 /* ViewController.swift */; };
+		474CDDB728C7B17700B9F842 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDB628C7B17700B9F842 /* UsersViewController.swift */; };
 		474CDDBD28C7B17700B9F842 /* CeibaTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDBB28C7B17700B9F842 /* CeibaTest.xcdatamodeld */; };
 		474CDDBF28C7B17900B9F842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 474CDDBE28C7B17900B9F842 /* Assets.xcassets */; };
 		474CDDC228C7B17900B9F842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 474CDDC028C7B17900B9F842 /* LaunchScreen.storyboard */; };
 		474CDDCD28C7B17A00B9F842 /* CeibaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDCC28C7B17A00B9F842 /* CeibaTestTests.swift */; };
 		474CDDD728C7B17A00B9F842 /* CeibaTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDD628C7B17A00B9F842 /* CeibaTestUITests.swift */; };
 		474CDDD928C7B17A00B9F842 /* CeibaTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDD828C7B17A00B9F842 /* CeibaTestUITestsLaunchTests.swift */; };
+		474CDDE928C7BD8600B9F842 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDE828C7BD8600B9F842 /* BaseWireframe.swift */; };
+		474CDDEB28C7BDB300B9F842 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDEA28C7BDB300B9F842 /* InteractorInterface.swift */; };
+		474CDDED28C7BDCC00B9F842 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDEC28C7BDCC00B9F842 /* PresenterInterface.swift */; };
+		474CDDEF28C7BDED00B9F842 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDEE28C7BDED00B9F842 /* ViewInterface.swift */; };
+		47F9295128C8F61E000D595A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9295028C8F61E000D595A /* Constants.swift */; };
+		47F9295428C8F6A5000D595A /* UsersWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9295328C8F6A5000D595A /* UsersWireframe.swift */; };
+		47F9295628C8F6F0000D595A /* UsersInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9295528C8F6F0000D595A /* UsersInterface.swift */; };
+		47F9295828C8F789000D595A /* UsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9295728C8F789000D595A /* UsersPresenter.swift */; };
+		47F9295A28C8F7A6000D595A /* UsersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9295928C8F7A6000D595A /* UsersInteractor.swift */; };
+		47F9295D28C8F906000D595A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9295C28C8F906000D595A /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +49,7 @@
 		474CDDAF28C7B17700B9F842 /* CeibaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeibaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		474CDDB228C7B17700B9F842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		474CDDB428C7B17700B9F842 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		474CDDB628C7B17700B9F842 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		474CDDB628C7B17700B9F842 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		474CDDBC28C7B17700B9F842 /* CeibaTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CeibaTest.xcdatamodel; sourceTree = "<group>"; };
 		474CDDBE28C7B17900B9F842 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		474CDDC128C7B17900B9F842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +59,16 @@
 		474CDDD228C7B17A00B9F842 /* CeibaTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CeibaTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		474CDDD628C7B17A00B9F842 /* CeibaTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeibaTestUITests.swift; sourceTree = "<group>"; };
 		474CDDD828C7B17A00B9F842 /* CeibaTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeibaTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		474CDDE828C7BD8600B9F842 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		474CDDEA28C7BDB300B9F842 /* InteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
+		474CDDEC28C7BDCC00B9F842 /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		474CDDEE28C7BDED00B9F842 /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		47F9295028C8F61E000D595A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		47F9295328C8F6A5000D595A /* UsersWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersWireframe.swift; sourceTree = "<group>"; };
+		47F9295528C8F6F0000D595A /* UsersInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInterface.swift; sourceTree = "<group>"; };
+		47F9295728C8F789000D595A /* UsersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPresenter.swift; sourceTree = "<group>"; };
+		47F9295928C8F7A6000D595A /* UsersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInteractor.swift; sourceTree = "<group>"; };
+		47F9295C28C8F906000D595A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +121,12 @@
 			children = (
 				474CDDB228C7B17700B9F842 /* AppDelegate.swift */,
 				474CDDB428C7B17700B9F842 /* SceneDelegate.swift */,
-				474CDDB628C7B17700B9F842 /* ViewController.swift */,
 				474CDDBE28C7B17900B9F842 /* Assets.xcassets */,
 				474CDDC028C7B17900B9F842 /* LaunchScreen.storyboard */,
 				474CDDC328C7B17900B9F842 /* Info.plist */,
 				474CDDBB28C7B17700B9F842 /* CeibaTest.xcdatamodeld */,
+				474CDDE628C7BCE800B9F842 /* Common */,
+				474CDDE528C7BCCD00B9F842 /* Modules */,
 			);
 			path = CeibaTest;
 			sourceTree = "<group>";
@@ -125,6 +146,71 @@
 				474CDDD828C7B17A00B9F842 /* CeibaTestUITestsLaunchTests.swift */,
 			);
 			path = CeibaTestUITests;
+			sourceTree = "<group>";
+		};
+		474CDDE528C7BCCD00B9F842 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				47F9295228C8F680000D595A /* Users */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		474CDDE628C7BCE800B9F842 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				474CDDE728C7BCFE00B9F842 /* Base */,
+				47F9295B28C8F8F7000D595A /* Models */,
+				47F9294F28C8F60A000D595A /* Utils */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		474CDDE728C7BCFE00B9F842 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				474CDDE828C7BD8600B9F842 /* BaseWireframe.swift */,
+				474CDDEA28C7BDB300B9F842 /* InteractorInterface.swift */,
+				474CDDEC28C7BDCC00B9F842 /* PresenterInterface.swift */,
+				474CDDEE28C7BDED00B9F842 /* ViewInterface.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		47F9294F28C8F60A000D595A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				47F9295028C8F61E000D595A /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		47F9295228C8F680000D595A /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				47F9295328C8F6A5000D595A /* UsersWireframe.swift */,
+				47F9295528C8F6F0000D595A /* UsersInterface.swift */,
+				47F9295728C8F789000D595A /* UsersPresenter.swift */,
+				47F9295928C8F7A6000D595A /* UsersInteractor.swift */,
+				47F9295E28C8FCF5000D595A /* View */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		47F9295B28C8F8F7000D595A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				47F9295C28C8F906000D595A /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		47F9295E28C8FCF5000D595A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				474CDDB628C7B17700B9F842 /* UsersViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,10 +343,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				474CDDB728C7B17700B9F842 /* ViewController.swift in Sources */,
+				474CDDEB28C7BDB300B9F842 /* InteractorInterface.swift in Sources */,
+				474CDDB728C7B17700B9F842 /* UsersViewController.swift in Sources */,
+				474CDDEF28C7BDED00B9F842 /* ViewInterface.swift in Sources */,
+				474CDDE928C7BD8600B9F842 /* BaseWireframe.swift in Sources */,
+				47F9295A28C8F7A6000D595A /* UsersInteractor.swift in Sources */,
 				474CDDB328C7B17700B9F842 /* AppDelegate.swift in Sources */,
+				47F9295D28C8F906000D595A /* User.swift in Sources */,
+				47F9295828C8F789000D595A /* UsersPresenter.swift in Sources */,
 				474CDDBD28C7B17700B9F842 /* CeibaTest.xcdatamodeld in Sources */,
 				474CDDB528C7B17700B9F842 /* SceneDelegate.swift in Sources */,
+				474CDDED28C7BDCC00B9F842 /* PresenterInterface.swift in Sources */,
+				47F9295128C8F61E000D595A /* Constants.swift in Sources */,
+				47F9295628C8F6F0000D595A /* UsersInterface.swift in Sources */,
+				47F9295428C8F6A5000D595A /* UsersWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
