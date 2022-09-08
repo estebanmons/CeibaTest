@@ -23,6 +23,8 @@ final class UsersViewController: UIViewController {
         return tableView
     }()
     
+    private let searchController = UISearchController()
+    
     // MARK: - Public properties -
     var presenter: UsersPresenterInterface!
     
@@ -36,9 +38,21 @@ final class UsersViewController: UIViewController {
     private func setupView() {
         view.backgroundColor = .white
         title = Constants.Users.title
+        setSearch()
         addViews()
         setConstraints()
         setupTableView()
+    }
+    
+    func setSearch() {
+        searchController.delegate = self
+        searchController.searchBar.delegate = self
+        searchController.searchBar.autocapitalizationType = .none
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = Constants.Users.searchUserPlaceholder
+        self.definesPresentationContext = true
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     private func addViews() {
@@ -97,9 +111,22 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+// MARK: - Extensions UserTableViewCellInterface -
 extension UsersViewController: UserTableViewCellInterface {
     
     func goToPosts(idUser: Int) {
         presenter.goToPosts(idUser: idUser)
+    }
+}
+
+// MARK: - Extensions  UISearch -
+extension UsersViewController: UISearchControllerDelegate, UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        presenter.searchUsers(with: searchText)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        presenter.searchUsers(with: Constants.emptyString)
     }
 }

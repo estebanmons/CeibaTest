@@ -34,6 +34,7 @@ class UserTableViewCell: UITableViewCell {
     }
     
     func setView() {
+        selectionStyle = .none
         userNameLabel.font = .boldSystemFont(ofSize: 20.0)
         userNameLabel.textColor = .systemGreen
         userPhoneLabel.font = .boldSystemFont(ofSize: 16.0)

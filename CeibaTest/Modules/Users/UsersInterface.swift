@@ -31,6 +31,7 @@ protocol UsersPresenterInterface: PresenterInterface {
     var numberOfUsers: Int { get }
     func getUserModel(at row: Int) -> UserModel
     func goToPosts(idUser: Int)
+    func searchUsers(with query: String)
 }
 
 protocol UsersInteractorInterface: InteractorInterface {

@@ -15,6 +15,7 @@ final class UsersPresenter {
     private let wireframe: UsersWireframeInterface
     
     private var allUsers = [User]()
+    private var resultUsers = [User]()
 
     // MARK: - Lifecycle -
     init(
@@ -33,6 +34,7 @@ final class UsersPresenter {
             switch result {
             case .success(let users):
                 strongSelf.allUsers = users
+                strongSelf.resultUsers = users
                 strongSelf.view.reloadData()
             case .error:
                 print("Error")
@@ -45,7 +47,7 @@ final class UsersPresenter {
 extension UsersPresenter: UsersPresenterInterface {
     
     var numberOfUsers: Int {
-        allUsers.count
+        resultUsers.count
     }
     
     func viewDidLoad() {
@@ -53,12 +55,22 @@ extension UsersPresenter: UsersPresenterInterface {
     }
     
     func getUserModel(at row: Int) -> UserModel {
-        let user = allUsers[row]
+        let user = resultUsers[row]
         return UserModel(email: user.email, id: user.id, name: user.name, phone: user.phone)
     }
     
     func goToPosts(idUser: Int) {
         guard let user = allUsers.first(where: {$0.id == idUser}) else { return }
         wireframe.goToPosts(user: UserModel(email: user.email, id: user.id, name: user.name, phone: user.phone))
+    }
+    
+    func searchUsers(with query: String) {
+        if query.isEmpty {
+            resultUsers = allUsers
+            view.reloadData()
+        } else {
+            resultUsers = allUsers.filter { $0.name.range(of: query, options: .caseInsensitive) != nil }
+            view.reloadData()
+        }
     }
 }

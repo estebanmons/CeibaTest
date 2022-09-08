@@ -22,10 +22,12 @@ class PostTableViewCell: UITableViewCell {
     }
     
     private func setStyles() {
+        contentView.backgroundColor = .systemGray6
+        selectionStyle = .none
         postTitleLabel.font = .boldSystemFont(ofSize: 20.0)
         postTitleLabel.textColor = .black
-        postBodyLabel.font = .boldSystemFont(ofSize: 17.0)
-        postBodyLabel.textColor = .systemGray
+        postBodyLabel.font = .systemFont(ofSize: 17.0)
+        postBodyLabel.textColor = .gray
     }
     
     func setModelData(_ model: PostModel) {

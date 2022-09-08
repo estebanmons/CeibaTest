@@ -22,6 +22,7 @@ struct Constants {
         static let seePosts = "VER PUBLICACIONES"
         static let phoneFillImage = "phone.fill"
         static let emailFillImage = "envelope.fill"
+        static let searchUserPlaceholder = "Buscar usuario"
     }
     
     struct Posts {
