@@ -14,18 +14,56 @@ final class UsersInteractor {
     init(usersRepository: UsersRepository) {
         self.usersRepository = usersRepository
     }
+    
+    private func requestServiceGetUsers(completionHandler: @escaping (UsersResult) -> Void) {
+        self.usersRepository.requestGetUsers { [unowned self] result in
+            switch result {
+            case .success(let data):
+                var users = [UserModel]()
+                data.forEach { user in
+                    users.append(UserModel(email: user.email, id: user.id, name: user.name, phone: user.phone))
+                }
+                self.coreDataManager.saveData(users: users) { success in
+                    completionHandler(.success(users))
+                }
+            case .error:
+                completionHandler(.error)
+            }
+        }
+    }
 }
 
 // MARK: - Extensions -
 extension UsersInteractor: UsersInteractorInterface {
     
-    func requestGetUsers(completionHandler: @escaping (UsersResult) -> Void) {
-        usersRepository.requestGetUsers { result in
-            switch result {
-            case .success(let users):
-                completionHandler(.success(users))
-            case .error:
-                completionHandler(.error)
+    var coreDataManager: CoreDataManager { CoreDataManager.sharedInstance }
+    
+    func requestGetUsers(refreshData: Bool, completionHandler: @escaping (UsersResult) -> Void) {
+        
+        if refreshData {
+            requestServiceGetUsers { result in
+                switch result {
+                case .success(let users):
+                    completionHandler(.success(users))
+                case .error:
+                    completionHandler(.error)
+                }
+            }
+        } else {
+            coreDataManager.getStoredData { [unowned self] result in
+                switch result {
+                case .success(let users):
+                    completionHandler(.success(users))
+                case .error:
+                    self.requestServiceGetUsers { result in
+                        switch result {
+                        case .success(let users):
+                            completionHandler(.success(users))
+                        case .error:
+                            completionHandler(.error)
+                        }
+                    }
+                }
             }
         }
     }

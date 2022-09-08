@@ -12,7 +12,7 @@ final class UsersRepository {
     // MARK: - Private properties -
     private lazy var apiManager = APIManager()
     
-    func requestGetUsers(completionHandler: @escaping (UsersResult) -> Void) {
+    func requestGetUsers(completionHandler: @escaping (UsersRepositoryResult) -> Void) {
         apiManager.request(parameters: EmptyRequest(), endpoint: .getUsers) { (result: Result<[User]>) in
             switch result {
             case .success(let data):

@@ -78,7 +78,7 @@ final class UsersViewController: UIViewController {
     }
     
     @objc private func handleRefreshControl() {
-        
+        presenter.refreshData()
     }
 }
 
@@ -86,6 +86,7 @@ final class UsersViewController: UIViewController {
 extension UsersViewController: UsersViewInterface {
     
     func reloadData() {
+        refreshControl.endRefreshing()
         tableView.reloadData()
     }
 }

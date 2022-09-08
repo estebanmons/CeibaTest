@@ -15,6 +15,11 @@ struct UserModel {
 }
 
 enum UsersResult {
+    case success([UserModel])
+    case error
+}
+
+enum UsersRepositoryResult {
     case success([User])
     case error
 }
@@ -32,8 +37,10 @@ protocol UsersPresenterInterface: PresenterInterface {
     func getUserModel(at row: Int) -> UserModel
     func goToPosts(idUser: Int)
     func searchUsers(with query: String)
+    func refreshData()
 }
 
 protocol UsersInteractorInterface: InteractorInterface {
-    func requestGetUsers(completionHandler: @escaping (UsersResult) -> Void)
+    var coreDataManager: CoreDataManager { get }
+    func requestGetUsers(refreshData: Bool, completionHandler: @escaping (UsersResult) -> Void)
 }

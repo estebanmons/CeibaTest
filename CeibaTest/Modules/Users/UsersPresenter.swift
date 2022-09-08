@@ -14,8 +14,8 @@ final class UsersPresenter {
     private let interactor: UsersInteractorInterface
     private let wireframe: UsersWireframeInterface
     
-    private var allUsers = [User]()
-    private var resultUsers = [User]()
+    private var allUsers = [UserModel]()
+    private var resultUsers = [UserModel]()
 
     // MARK: - Lifecycle -
     init(
@@ -28,8 +28,8 @@ final class UsersPresenter {
         self.wireframe = wireframe
     }
     
-    func getUsers() {
-        interactor.requestGetUsers { [weak self] result in
+    func getUsers(refreshData: Bool) {
+        interactor.requestGetUsers(refreshData: refreshData) { [weak self] result in
             guard let strongSelf = self else { return }
             switch result {
             case .success(let users):
@@ -51,7 +51,7 @@ extension UsersPresenter: UsersPresenterInterface {
     }
     
     func viewDidLoad() {
-        getUsers()
+        getUsers(refreshData: false)
     }
     
     func getUserModel(at row: Int) -> UserModel {
@@ -72,5 +72,9 @@ extension UsersPresenter: UsersPresenterInterface {
             resultUsers = allUsers.filter { $0.name.range(of: query, options: .caseInsensitive) != nil }
             view.reloadData()
         }
+    }
+    
+    func refreshData() {
+        getUsers(refreshData: true)
     }
 }
