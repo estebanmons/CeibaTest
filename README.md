@@ -18,13 +18,13 @@ Se utiliza para realizar las peticiones hacia los servicios. https://github.com/
 
 # Módulos
 
-Se crean 2 módulos específicos, los cuáles son Users, UserPosts
+Se crean 2 módulos específicos, los cuáles son Users y UserPosts
 
 ## Users
 
 Este módulo es el encargado de iniciar la app, contiene el servicio para llamar a los usuarios y la lógica para guardar los datos a través de Core Data.
 
-## ProductList
+## UserPosts
 
 Este módulo nos presenta la informació de el ususario y las publicaciones realizadas.
 
