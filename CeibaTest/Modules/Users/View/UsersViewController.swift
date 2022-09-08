@@ -35,6 +35,7 @@ final class UsersViewController: UIViewController {
         presenter.viewDidLoad()
     }
     
+    // MARK: - Private methods -
     private func setupView() {
         view.backgroundColor = .white
         title = Constants.Users.title

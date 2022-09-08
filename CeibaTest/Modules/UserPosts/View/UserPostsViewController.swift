@@ -53,6 +53,12 @@ final class UserPostsViewController: UIViewController {
         presenter.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewWillAppear(animated: animated)
+    }
+    
+    // MARK: - Private methods -
     private func setupView() {
         view.backgroundColor = .white
         title = Constants.Posts.title

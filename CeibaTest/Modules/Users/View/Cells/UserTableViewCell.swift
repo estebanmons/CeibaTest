@@ -8,7 +8,8 @@
 import UIKit
 
 class UserTableViewCell: UITableViewCell {
-
+    
+    // MARK: - IBOutlets -
     @IBOutlet weak var userEmailImageView: UIImageView!
     @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -19,21 +20,14 @@ class UserTableViewCell: UITableViewCell {
     private var idUser: Int? = nil
     var delegate: UserTableViewCellInterface!
     
-    
+    // MARK: - Life cycle -
     override func awakeFromNib() {
         super.awakeFromNib()
         setView()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-    }
-    
-    func setView() {
+    // MARK: - Private methods -
+    private func setView() {
         selectionStyle = .none
         userNameLabel.font = .boldSystemFont(ofSize: 20.0)
         userNameLabel.textColor = .systemGreen
@@ -55,6 +49,7 @@ class UserTableViewCell: UITableViewCell {
         }
     }
     
+    // MARK: - Public methods -
     func setModelData(_ model: UserModel) {
         idUser = model.id
         userNameLabel.text = model.name

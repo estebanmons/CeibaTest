@@ -43,6 +43,7 @@ class CoreDataManager {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<Users> = Users.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(keyPath: \Users.id, ascending: true)]
         
         do {
             let result = try context.fetch(fetchRequest)

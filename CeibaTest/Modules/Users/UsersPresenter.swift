@@ -28,9 +28,12 @@ final class UsersPresenter {
         self.wireframe = wireframe
     }
     
-    func getUsers(refreshData: Bool) {
+    // MARK: - Private methods -
+    private func getUsers(refreshData: Bool) {
+        wireframe.initActivityIndicator(animated: false)
         interactor.requestGetUsers(refreshData: refreshData) { [weak self] result in
             guard let strongSelf = self else { return }
+            strongSelf.wireframe.endActivityIndicator(animated: false)
             switch result {
             case .success(let users):
                 strongSelf.allUsers = users

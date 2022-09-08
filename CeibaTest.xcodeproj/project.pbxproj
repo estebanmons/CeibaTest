@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470B6E5328CA4E9E00D449BC /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470B6E5228CA4E9E00D449BC /* ActivityIndicator.swift */; };
 		471B7CC828C9924000476A90 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471B7CC728C9924000476A90 /* CoreDataManager.swift */; };
 		474CDDB328C7B17700B9F842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDB228C7B17700B9F842 /* AppDelegate.swift */; };
 		474CDDB528C7B17700B9F842 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDB428C7B17700B9F842 /* SceneDelegate.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		470B6E5228CA4E9E00D449BC /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		471B7CC728C9924000476A90 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		474CDDAF28C7B17700B9F842 /* CeibaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeibaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		474CDDB228C7B17700B9F842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				47F9295028C8F61E000D595A /* Constants.swift */,
+				470B6E5228CA4E9E00D449BC /* ActivityIndicator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				474CDDB728C7B17700B9F842 /* UsersViewController.swift in Sources */,
 				474CDDEF28C7BDED00B9F842 /* ViewInterface.swift in Sources */,
 				474CDDE928C7BD8600B9F842 /* BaseWireframe.swift in Sources */,
+				470B6E5328CA4E9E00D449BC /* ActivityIndicator.swift in Sources */,
 				47F9295A28C8F7A6000D595A /* UsersInteractor.swift in Sources */,
 				47F9296828C90064000D595A /* UsersRepository.swift in Sources */,
 				471B7CC828C9924000476A90 /* CoreDataManager.swift in Sources */,

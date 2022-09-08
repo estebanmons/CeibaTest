@@ -8,19 +8,18 @@
 import UIKit
 
 class PostTableViewCell: UITableViewCell {
-
+    
+    // MARK: - IBOutlets -
     @IBOutlet weak var postTitleLabel: UILabel!
     @IBOutlet weak var postBodyLabel: UILabel!
     
+    // MARK: - Life cycle -
     override func awakeFromNib() {
         super.awakeFromNib()
         setStyles()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
+    // MARK: - Private methods -
     private func setStyles() {
         contentView.backgroundColor = .systemGray6
         selectionStyle = .none
@@ -30,6 +29,7 @@ class PostTableViewCell: UITableViewCell {
         postBodyLabel.textColor = .gray
     }
     
+    // MARK: - Public methods -
     func setModelData(_ model: PostModel) {
         postTitleLabel.text = model.title
         postBodyLabel.text = model.body

@@ -10,6 +10,8 @@ import UIKit
 protocol WireframeInterface: AnyObject {
     func showAlert(_ title: String, message: String)
     func showAlertWithAction(_ title: String, message: String, handler: @escaping () -> Void)
+    func initActivityIndicator(animated: Bool)
+    func endActivityIndicator(animated: Bool)
 }
 
 extension WireframeInterface {
@@ -20,6 +22,14 @@ extension WireframeInterface {
     
     func showAlertWithAction(_ title: String, message: String, handler: @escaping () -> Void) {
         showAlertWithAction(title, message: message, handler: handler)
+    }
+    
+    func initActivityIndicator(animated: Bool) {
+        initActivityIndicator(animated: animated)
+    }
+    
+    func endActivityIndicator(animated: Bool) {
+        endActivityIndicator(animated: animated)
     }
 }
 
@@ -33,6 +43,10 @@ class BaseWireframe {
     init(viewController: UIViewController) {
         temporaryStoredViewController = viewController
         _viewController = viewController
+    }
+    
+    var topViewController: UIViewController {
+        return viewController.getTopViewController()
     }
 }
 
@@ -60,6 +74,18 @@ extension BaseWireframe {
 
     var navigationController: UINavigationController? {
         return viewController.navigationController
+    }
+    
+    func initActivityIndicator(animated: Bool) {
+        let activityIndicator = ActivityIndicator()
+        activityIndicator.startAnimating()
+        activityIndicator.modalPresentationStyle = .overFullScreen
+        activityIndicator.modalTransitionStyle = .crossDissolve
+        topViewController.present(activityIndicator, animated: animated)
+    }
+    
+    func endActivityIndicator(animated: Bool) {
+        topViewController.dismiss(animated: animated)
     }
 }
 
@@ -90,6 +116,20 @@ extension UIViewController {
         DispatchQueue.main.async(execute: {
             self.present(alertController, animated: true, completion: nil)
         })
+    }
+    
+    func getTopViewController() -> UIViewController {
+        if let tabBarController = self as? UITabBarController,
+           let selectedViewController = tabBarController.selectedViewController {
+            return (selectedViewController as? UINavigationController)?.visibleViewController ?? selectedViewController
+        } else if let navigationController = self as? UINavigationController,
+                  let visibleViewController = navigationController.visibleViewController {
+            return visibleViewController
+        } else if let child = children.last {
+            return (child as? UINavigationController)?.visibleViewController ?? child
+        } else {
+            return self
+        }
     }
 }
 
