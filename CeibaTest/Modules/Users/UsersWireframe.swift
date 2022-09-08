@@ -26,4 +26,12 @@ extension UsersWireframe: UsersWireframeInterface {
     func goToPosts(user: UserModel) {
         navigationController?.pushWireframe(UserPostsWireframe(user: user))
     }
+    
+    func initLoader() {
+        self.initActivityIndicator(animated: false)
+    }
+    
+    func endLoader() {
+        self.endActivityIndicator(animated: false)
+    }
 }

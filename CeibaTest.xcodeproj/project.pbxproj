@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		470B6E5328CA4E9E00D449BC /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470B6E5228CA4E9E00D449BC /* ActivityIndicator.swift */; };
+		470B6E5328CA4E9E00D449BC /* UIActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470B6E5228CA4E9E00D449BC /* UIActivityIndicator.swift */; };
 		471B7CC828C9924000476A90 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471B7CC728C9924000476A90 /* CoreDataManager.swift */; };
 		474CDDB328C7B17700B9F842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDB228C7B17700B9F842 /* AppDelegate.swift */; };
 		474CDDB528C7B17700B9F842 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDB428C7B17700B9F842 /* SceneDelegate.swift */; };
@@ -16,12 +16,12 @@
 		474CDDBF28C7B17900B9F842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 474CDDBE28C7B17900B9F842 /* Assets.xcassets */; };
 		474CDDC228C7B17900B9F842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 474CDDC028C7B17900B9F842 /* LaunchScreen.storyboard */; };
 		474CDDCD28C7B17A00B9F842 /* CeibaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDCC28C7B17A00B9F842 /* CeibaTestTests.swift */; };
-		474CDDD728C7B17A00B9F842 /* CeibaTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDD628C7B17A00B9F842 /* CeibaTestUITests.swift */; };
-		474CDDD928C7B17A00B9F842 /* CeibaTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDD828C7B17A00B9F842 /* CeibaTestUITestsLaunchTests.swift */; };
 		474CDDE928C7BD8600B9F842 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDE828C7BD8600B9F842 /* BaseWireframe.swift */; };
 		474CDDEB28C7BDB300B9F842 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDEA28C7BDB300B9F842 /* InteractorInterface.swift */; };
 		474CDDED28C7BDCC00B9F842 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDEC28C7BDCC00B9F842 /* PresenterInterface.swift */; };
 		474CDDEF28C7BDED00B9F842 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474CDDEE28C7BDED00B9F842 /* ViewInterface.swift */; };
+		4778F7EF28CA7E5B007FE7BA /* UserPostsPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4778F7EE28CA7E5B007FE7BA /* UserPostsPresenterTest.swift */; };
+		47C16A0A28CA6C0D001491E7 /* UsersPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C16A0928CA6C0D001491E7 /* UsersPresenterTest.swift */; };
 		47F9295128C8F61E000D595A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9295028C8F61E000D595A /* Constants.swift */; };
 		47F9295428C8F6A5000D595A /* UsersWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9295328C8F6A5000D595A /* UsersWireframe.swift */; };
 		47F9295628C8F6F0000D595A /* UsersInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9295528C8F6F0000D595A /* UsersInterface.swift */; };
@@ -53,17 +53,10 @@
 			remoteGlobalIDString = 474CDDAE28C7B17700B9F842;
 			remoteInfo = CeibaTest;
 		};
-		474CDDD328C7B17A00B9F842 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 474CDDA728C7B17700B9F842 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 474CDDAE28C7B17700B9F842;
-			remoteInfo = CeibaTest;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		470B6E5228CA4E9E00D449BC /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		470B6E5228CA4E9E00D449BC /* UIActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicator.swift; sourceTree = "<group>"; };
 		471B7CC728C9924000476A90 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		474CDDAF28C7B17700B9F842 /* CeibaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeibaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		474CDDB228C7B17700B9F842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,13 +68,12 @@
 		474CDDC328C7B17900B9F842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		474CDDC828C7B17A00B9F842 /* CeibaTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CeibaTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		474CDDCC28C7B17A00B9F842 /* CeibaTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeibaTestTests.swift; sourceTree = "<group>"; };
-		474CDDD228C7B17A00B9F842 /* CeibaTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CeibaTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		474CDDD628C7B17A00B9F842 /* CeibaTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeibaTestUITests.swift; sourceTree = "<group>"; };
-		474CDDD828C7B17A00B9F842 /* CeibaTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeibaTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		474CDDE828C7BD8600B9F842 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		474CDDEA28C7BDB300B9F842 /* InteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
 		474CDDEC28C7BDCC00B9F842 /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
 		474CDDEE28C7BDED00B9F842 /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		4778F7EE28CA7E5B007FE7BA /* UserPostsPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsPresenterTest.swift; sourceTree = "<group>"; };
+		47C16A0928CA6C0D001491E7 /* UsersPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPresenterTest.swift; sourceTree = "<group>"; };
 		47F9295028C8F61E000D595A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		47F9295328C8F6A5000D595A /* UsersWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersWireframe.swift; sourceTree = "<group>"; };
 		47F9295528C8F6F0000D595A /* UsersInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInterface.swift; sourceTree = "<group>"; };
@@ -120,13 +112,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		474CDDCF28C7B17A00B9F842 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -143,7 +128,6 @@
 			children = (
 				474CDDB128C7B17700B9F842 /* CeibaTest */,
 				474CDDCB28C7B17A00B9F842 /* CeibaTestTests */,
-				474CDDD528C7B17A00B9F842 /* CeibaTestUITests */,
 				474CDDB028C7B17700B9F842 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -153,7 +137,6 @@
 			children = (
 				474CDDAF28C7B17700B9F842 /* CeibaTest.app */,
 				474CDDC828C7B17A00B9F842 /* CeibaTestTests.xctest */,
-				474CDDD228C7B17A00B9F842 /* CeibaTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,17 +160,10 @@
 			isa = PBXGroup;
 			children = (
 				474CDDCC28C7B17A00B9F842 /* CeibaTestTests.swift */,
+				47C16A0928CA6C0D001491E7 /* UsersPresenterTest.swift */,
+				4778F7EE28CA7E5B007FE7BA /* UserPostsPresenterTest.swift */,
 			);
 			path = CeibaTestTests;
-			sourceTree = "<group>";
-		};
-		474CDDD528C7B17A00B9F842 /* CeibaTestUITests */ = {
-			isa = PBXGroup;
-			children = (
-				474CDDD628C7B17A00B9F842 /* CeibaTestUITests.swift */,
-				474CDDD828C7B17A00B9F842 /* CeibaTestUITestsLaunchTests.swift */,
-			);
-			path = CeibaTestUITests;
 			sourceTree = "<group>";
 		};
 		474CDDE528C7BCCD00B9F842 /* Modules */ = {
@@ -226,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				47F9295028C8F61E000D595A /* Constants.swift */,
-				470B6E5228CA4E9E00D449BC /* ActivityIndicator.swift */,
+				470B6E5228CA4E9E00D449BC /* UIActivityIndicator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -352,24 +328,6 @@
 			productReference = 474CDDC828C7B17A00B9F842 /* CeibaTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		474CDDD128C7B17A00B9F842 /* CeibaTestUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 474CDDE228C7B17A00B9F842 /* Build configuration list for PBXNativeTarget "CeibaTestUITests" */;
-			buildPhases = (
-				474CDDCE28C7B17A00B9F842 /* Sources */,
-				474CDDCF28C7B17A00B9F842 /* Frameworks */,
-				474CDDD028C7B17A00B9F842 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				474CDDD428C7B17A00B9F842 /* PBXTargetDependency */,
-			);
-			name = CeibaTestUITests;
-			productName = CeibaTestUITests;
-			productReference = 474CDDD228C7B17A00B9F842 /* CeibaTestUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -384,10 +342,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					474CDDC728C7B17A00B9F842 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 474CDDAE28C7B17700B9F842;
-					};
-					474CDDD128C7B17A00B9F842 = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = 474CDDAE28C7B17700B9F842;
 					};
@@ -411,7 +365,6 @@
 			targets = (
 				474CDDAE28C7B17700B9F842 /* CeibaTest */,
 				474CDDC728C7B17A00B9F842 /* CeibaTestTests */,
-				474CDDD128C7B17A00B9F842 /* CeibaTestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -435,13 +388,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		474CDDD028C7B17A00B9F842 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -453,7 +399,7 @@
 				474CDDB728C7B17700B9F842 /* UsersViewController.swift in Sources */,
 				474CDDEF28C7BDED00B9F842 /* ViewInterface.swift in Sources */,
 				474CDDE928C7BD8600B9F842 /* BaseWireframe.swift in Sources */,
-				470B6E5328CA4E9E00D449BC /* ActivityIndicator.swift in Sources */,
+				470B6E5328CA4E9E00D449BC /* UIActivityIndicator.swift in Sources */,
 				47F9295A28C8F7A6000D595A /* UsersInteractor.swift in Sources */,
 				47F9296828C90064000D595A /* UsersRepository.swift in Sources */,
 				471B7CC828C9924000476A90 /* CoreDataManager.swift in Sources */,
@@ -485,15 +431,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				474CDDCD28C7B17A00B9F842 /* CeibaTestTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		474CDDCE28C7B17A00B9F842 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				474CDDD728C7B17A00B9F842 /* CeibaTestUITests.swift in Sources */,
-				474CDDD928C7B17A00B9F842 /* CeibaTestUITestsLaunchTests.swift in Sources */,
+				4778F7EF28CA7E5B007FE7BA /* UserPostsPresenterTest.swift in Sources */,
+				47C16A0A28CA6C0D001491E7 /* UsersPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,11 +443,6 @@
 			isa = PBXTargetDependency;
 			target = 474CDDAE28C7B17700B9F842 /* CeibaTest */;
 			targetProxy = 474CDDC928C7B17A00B9F842 /* PBXContainerItemProxy */;
-		};
-		474CDDD428C7B17A00B9F842 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 474CDDAE28C7B17700B9F842 /* CeibaTest */;
-			targetProxy = 474CDDD328C7B17A00B9F842 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -736,42 +670,6 @@
 			};
 			name = Release;
 		};
-		474CDDE328C7B17A00B9F842 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 78AHQ4893X;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jmonsalve.CeibaTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CeibaTest;
-			};
-			name = Debug;
-		};
-		474CDDE428C7B17A00B9F842 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 78AHQ4893X;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jmonsalve.CeibaTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CeibaTest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -798,15 +696,6 @@
 			buildConfigurations = (
 				474CDDE028C7B17A00B9F842 /* Debug */,
 				474CDDE128C7B17A00B9F842 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		474CDDE228C7B17A00B9F842 /* Build configuration list for PBXNativeTarget "CeibaTestUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				474CDDE328C7B17A00B9F842 /* Debug */,
-				474CDDE428C7B17A00B9F842 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

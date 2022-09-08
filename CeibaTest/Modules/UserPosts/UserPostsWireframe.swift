@@ -20,4 +20,13 @@ final class UserPostsWireframe: BaseWireframe {
 }
 
 // MARK: - Extensions -
-extension UserPostsWireframe: UserPostsWireframeInterface { }
+extension UserPostsWireframe: UserPostsWireframeInterface {
+    
+    func initLoader() {
+        self.initActivityIndicator(animated: false)
+    }
+    
+    func endLoader() {
+        self.endActivityIndicator(animated: false)
+    }
+}

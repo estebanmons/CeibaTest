@@ -32,10 +32,10 @@ final class UserPostsPresenter {
     
     // MARK: - Private methods -
     private func getPosts() {
-        wireframe.initActivityIndicator(animated: false)
+        wireframe.initLoader()
         interactor.getPosts(by: user.id) { [weak self] result in
             guard let strongSelf = self else { return }
-            strongSelf.wireframe.endActivityIndicator(animated: false)
+            strongSelf.wireframe.endLoader()
             switch result {
             case .success(let posts):
                 strongSelf.posts = posts

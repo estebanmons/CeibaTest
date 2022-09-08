@@ -26,6 +26,8 @@ enum UsersRepositoryResult {
 
 protocol UsersWireframeInterface: WireframeInterface {
     func goToPosts(user: UserModel)
+    func initLoader()
+    func endLoader()
 }
 
 protocol UsersViewInterface: ViewInterface {

@@ -17,7 +17,10 @@ enum PostsResult {
     case error
 }
 
-protocol UserPostsWireframeInterface: WireframeInterface { }
+protocol UserPostsWireframeInterface: WireframeInterface {
+    func initLoader()
+    func endLoader()
+}
 
 protocol UserPostsViewInterface: ViewInterface {
     func setUserData(user: UserModel)

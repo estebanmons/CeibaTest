@@ -10,6 +10,12 @@ import UIKit
 final class UserPostsViewController: UIViewController {
     
     // MARK: - Private properties -
+    private lazy var postsTableView: UITableView = {
+        let tableView = UITableView(frame: CGRect.zero, style: .plain)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
+    
     private lazy var userEmailLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 20.0)
@@ -35,12 +41,6 @@ final class UserPostsViewController: UIViewController {
         label.numberOfLines = 1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
-    }()
-    
-    private lazy var postsTableView: UITableView = {
-        let tableView = UITableView(frame: CGRect.zero, style: .plain)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
     }()
     
     // MARK: - Public properties -
