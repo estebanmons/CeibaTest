@@ -34,7 +34,7 @@ class CoreDataManager {
             try context.save()
             completionHandler(true)
         } catch {
-            print("Error saving")
+            completionHandler(false)
         }
     }
 
@@ -65,7 +65,7 @@ class CoreDataManager {
                 completionHandler(.error)
             }
         } catch {
-            print("El error obteniendo usuario(s) \(error)")
+            completionHandler(.error)
         }
     }
 
@@ -78,7 +78,7 @@ class CoreDataManager {
         do {
             try context.execute(deleteBatch)
         } catch {
-            print("Error Borrando los usuarios \(error)")
+            return
         }
     }
 }
